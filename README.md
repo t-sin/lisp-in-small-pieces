@@ -1,4 +1,4 @@
-# Lisp Implementing Festival with Common Lisp
+# Lisp Implementing Festival
 
 Lisp implementing studies towards Queinnec's "Lisp in Small Pieces."
 
