@@ -109,7 +109,7 @@
         ((if) (if (evaluate (car (cdr exp)) env)
                   (evaluate (car (cdr (cdr exp))) env)
                   (evaluate (car (cdr (cdr (cdr exp)))) env)))
-        ((begin) (eprogn (cdr e) env))
+        ((begin) (eprogn (cdr exp) env))
         ((set!) (update! (car (cdr exp)) env (evaluate (car (cdr (cdr exp))) env)))
         ((lambda) (make-function (car (cdr exp)) (cdr (cdr exp)) env))
         (else (invoke (evaluate (car exp) env)
